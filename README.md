@@ -10,6 +10,8 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'mercanet'
+# need for the post reception from mercanet api
+gem 'rack-cors', require: 'rack/cors'
 ```
 
 And then execute:
@@ -21,8 +23,20 @@ Or install it yourself as:
     $ gem install mercanet
 
 ## Usage
+Create a Mercanet Initializer with :
+```ruby
+# the value is the test value of mercanet, use your personnal value from mercanet and use rails credentials
+Mercanet.config do |m|
+  m.url = "https://payment-webinit-mercanet.test.sips-atos.com"
+  m.merchant_id = "211000021310001"
+  m.secret_key = "S9i8qClCnb2CZU3y3Vn0toIOgz3z_aBi79akR30vM9o"
+  m.key_version = 1
+  m.interface_version = "IR_WS_2.20"
+  m.automatic_response_url = 'http://localhost:3000'
+  m.normal_return_url = 'http://localhost:3000'
+end
+```
 
-TODO: Write usage instructions here
 
 ## Development
 

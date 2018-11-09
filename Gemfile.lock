@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mercanet (0.1.0)
+    mercanet (0.0.1)
       activesupport (= 5.2.1)
 
 GEM
