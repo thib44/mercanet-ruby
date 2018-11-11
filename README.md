@@ -1,8 +1,6 @@
 # Mercanet
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mercanet`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Ruby connector to the Mercanet API.
 
 The full documentation of mercanet : https://documentation.mercanet.bnpparibas.net
 ## Installation
@@ -47,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mercanet.
+Bug reports and pull requests are welcome on GitHub at https://github.com/thib44/mercanet-ruby.
 
 ## License
 
