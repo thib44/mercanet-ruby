@@ -4,7 +4,7 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 TODO: Delete this and the text above, and describe your gem
 
-https://documentation.mercanet.bnpparibas.net
+The full documentation of mercanet : https://documentation.mercanet.bnpparibas.net
 ## Installation
 
 Add this line to your application's Gemfile:
