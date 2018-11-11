@@ -31,7 +31,7 @@ module Mercanet
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
       req = Net::HTTP::Post.new(uri.path, initheader = {'Content-Type' => 'application/json'})
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      http.verify_mode = OpenSSL::SSL::VERIFY_NONE if Mercanet.development?
       req.body = data.to_json
       response = http.request(req)
       JSON.parse(response.body)

@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
   spec.email         = ["thibault.finot@gmail.com"]
 
   spec.summary       = "Ruby gem for mercanet from Bnp"
-  # spec.description   = %q{TODO: Write a longer description or delete this line.}
-  # spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.description   = "A ruby gem to connect and use the Mercanet API"
+  spec.homepage      = "https://github.com/thib44/mercanet-ruby"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
