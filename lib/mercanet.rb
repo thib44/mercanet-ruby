@@ -1,5 +1,6 @@
 require "mercanet/version"
 require "mercanet/payment"
+require "mercanet/response"
 require "byebug"
 
 module Mercanet
