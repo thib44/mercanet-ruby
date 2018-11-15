@@ -36,6 +36,32 @@ Mercanet.config do |m|
 end
 ```
 
+Then create two methods in controller (wich correspond to your response_url) to treate the mercanet response who can look like that :
+```ruby
+def mercanet_response_automatic
+    response = Mercanet::Response.new(params)
+    @sale = current_user.sales.find_by(payment_reference: response.hash_data['transaction_reference'])
+    @sale.update!(mercanet_response: response.hash_data)
+    if response.is_valid?
+      @sale.validate!
+    else
+      @sale.refuse!
+    end
+  end
+
+  def mercanet_response_manual
+    response = Mercanet::Response.new(params)
+    @sale = Sale.find_by(payment_reference: response.hash_data['transaction_reference'])
+    @sale.update!(mercanet_response: response.hash_data)
+    if response.is_valid?
+      @sale.validate!
+    else
+      @sale.refuse!
+    end
+    redirect_to root_path
+  end
+```
+
 
 ## Development
 
